@@ -1,12 +1,4 @@
 import { AppSidebar } from "@/components/app-sidebar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
@@ -39,13 +31,15 @@ export default function Page() {
             <Link href="/dashboard">Overview</Link>
           </span>
           <span className="text-sm">
-            <Link href="/dashboard/compliance">Compliance</Link>
+            <Link href="/nycompliance.pdf" target="_blank">
+              Compliance
+            </Link>
           </span>
           <span className="text-sm">
-            <Link href="/dashboard/analytics">Analytics</Link>
+            <Link href="#">Analytics</Link>
           </span>
           <span className="text-sm">
-            <Link href="/dashboard/reports">Reports</Link>
+            <Link href="#">Reports</Link>
           </span>
           <div className="flex items-center gap-3 ml-auto">
             <div className="relative">
@@ -180,9 +174,7 @@ export default function Page() {
                     rows={5}
                   />
                   <div className="flex justify-end mt-3">
-                    <Button size="sm">
-                      Save Log
-                    </Button>
+                    <Button size="sm">Save Log</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -192,7 +184,7 @@ export default function Page() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Eye className="h-5 w-5" />
-                    Air Quality Monitor
+                    Air Quality
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -217,19 +209,25 @@ export default function Page() {
                     <div className="grid grid-cols-3 gap-2">
                       <div className="text-center p-2 rounded bg-gray-50">
                         <Thermometer className="w-4 h-4 text-gray-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-800">72°F</div>
+                        <div className="text-sm font-medium text-gray-800">
+                          72°F
+                        </div>
                         <div className="text-xs text-gray-600">Temp</div>
                       </div>
 
                       <div className="text-center p-2 rounded bg-gray-50">
                         <Droplets className="w-4 h-4 text-gray-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-800">68%</div>
+                        <div className="text-sm font-medium text-gray-800">
+                          68%
+                        </div>
                         <div className="text-xs text-gray-600">Humidity</div>
                       </div>
 
                       <div className="text-center p-2 rounded bg-gray-50">
                         <Wind className="w-4 h-4 text-gray-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-800">8.2 mph</div>
+                        <div className="text-sm font-medium text-gray-800">
+                          8.2 mph
+                        </div>
                         <div className="text-xs text-gray-600">Wind</div>
                       </div>
                     </div>
