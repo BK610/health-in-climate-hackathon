@@ -86,24 +86,26 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">
-                $13,653
+                $2,900
               </div>
               <p className="text-neutral-600">
-                Average OSHA penalty per violation
-              </p>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">47%</div>
-              <p className="text-neutral-600">
-                Of construction sites face weather-related delays annually
+                Average OSHA penalty per construction site violation
               </p>
             </div>
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">
-                $250K+
+                $150K+
               </div>
               <p className="text-neutral-600">
                 Potential cost of serious violations
+              </p>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">79%</div>
+              <p className="text-neutral-600">
+                Of construction sites report heat incidents,
+                <br />
+                losing $5-10K per event
               </p>
             </div>
           </div>
