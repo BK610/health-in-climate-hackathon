@@ -20,7 +20,7 @@ import {
   CardAction,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, Shield, CheckCircle } from "lucide-react";
+import { MapPin, Users, Clock, AlertTriangle, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -84,6 +84,13 @@ export default function Page() {
               </div>
             </CardHeader>
           </Card>
+          <div className="grid grid-cols-2 gap-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Tasks List</CardTitle>
+              </CardHeader>
+            </Card>
+          </div>
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="bg-muted/50 aspect-video rounded-xl" />
             <div className="bg-muted/50 aspect-video rounded-xl" />
