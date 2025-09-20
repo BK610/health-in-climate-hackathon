@@ -21,7 +21,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle, Wind, Thermometer, Droplets, Eye, Bell, User } from "lucide-react";
+import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle, Wind, Thermometer, Droplets, Eye, Bell, User, FileText } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -190,6 +190,57 @@ export default function Page() {
 
                     <div className="text-xs text-muted-foreground text-center border-t pt-3">
                       Last updated: 30 seconds ago
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <FileText className="h-5 w-5" />
+                    Recent Logs
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-50">
+                      <div className="flex-shrink-0 w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-gray-900">Distributed N95 masks to all workers</div>
+                        <div className="text-xs text-gray-500">2 minutes ago • Safety Team</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-50">
+                      <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-gray-900">Added new HEPA filters to ventilation system</div>
+                        <div className="text-xs text-gray-500">15 minutes ago • Maintenance</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-50">
+                      <div className="flex-shrink-0 w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-gray-900">Updated safety protocol due to air quality alert</div>
+                        <div className="text-xs text-gray-500">32 minutes ago • Site Manager</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-50">
+                      <div className="flex-shrink-0 w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-gray-900">Conducted air quality inspection - Zone A</div>
+                        <div className="text-xs text-gray-500">1 hour ago • Environmental Team</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 p-3 rounded-lg bg-gray-50">
+                      <div className="flex-shrink-0 w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-gray-900">Emergency ventilation activated in Sector 3</div>
+                        <div className="text-xs text-gray-500">2 hours ago • Emergency Response</div>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
