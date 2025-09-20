@@ -86,31 +86,50 @@ export default function Page() {
             </CardHeader>
           </Card>
           <div className="grid grid-cols-2 gap-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Tasks List</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-col gap-3">
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
-                    <CheckCircle className="h-5 w-5 text-green-600 cursor-pointer" />
-                    <span className="text-green-800">Distribute masks to workers</span>
+            <div className="flex flex-col gap-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Tasks List</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
+                      <CheckCircle className="h-5 w-5 text-green-600 cursor-pointer" />
+                      <span className="text-green-800">Distribute masks to workers</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded-lg bg-red-50 border border-red-200">
+                      <Circle className="h-5 w-5 text-red-600 cursor-pointer hover:text-red-700" />
+                      <span className="text-red-800">Upgrade equipment</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
+                      <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
+                      <span className="text-yellow-800">Notify onsite manager</span>
+                    </div>
+                    <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
+                      <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
+                      <span className="text-yellow-800">Review report</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-red-50 border border-red-200">
-                    <Circle className="h-5 w-5 text-red-600 cursor-pointer hover:text-red-700" />
-                    <span className="text-red-800">Upgrade equipment</span>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Create New Log</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <textarea
+                    placeholder="Enter your log entry here..."
+                    className="w-full min-h-[120px] p-3 border border-input rounded-md bg-transparent text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-vertical"
+                    rows={5}
+                  />
+                  <div className="flex justify-end mt-3">
+                    <Button size="sm">
+                      Save Log
+                    </Button>
                   </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
-                    <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
-                    <span className="text-yellow-800">Notify onsite manager</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
-                    <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
-                    <span className="text-yellow-800">Review report</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="bg-muted/50 aspect-video rounded-xl" />
