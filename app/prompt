@@ -1,0 +1,11 @@
+The purpose of this app is help construction managers deal with compliance for climate related regulations. If the air quality is bad, then the manager needs to complete certain tasks. 
+
+There will be multiple sites per manager, for example, on in NYC and one in LA. A navbar will be used to switch between then, and a searchbar will be able the list on the navbar to search for other sites.
+
+The main call to action is in the tasks. Example tasks will include:
+- distributing masks to workers
+- updating equipment
+- notifying onsite manager
+- reviewing report
+
+Each site will have one of three levels representing the 
