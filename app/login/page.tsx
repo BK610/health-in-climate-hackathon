@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function LoginPage() {
   return (
@@ -26,7 +27,6 @@ export default function LoginPage() {
                 id="email"
                 type="email"
                 placeholder="m@example.com"
-                required
               />
             </div>
             <div className="space-y-2">
@@ -34,11 +34,10 @@ export default function LoginPage() {
               <Input
                 id="password"
                 type="password"
-                required
               />
             </div>
-            <Button className="w-full">
-              Sign In
+            <Button asChild className="w-full">
+              <Link href="/dashboard">Sign In</Link>
             </Button>
           </CardContent>
         </Card>
