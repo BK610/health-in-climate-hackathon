@@ -15,7 +15,7 @@ export default function Home() {
               <p className="text-2xl text-neutral-600 mb-4 max-w-2xl">
                 Compliance failure is expensive.
                 <br />
-                Environmental quality is unpredictable.
+                Environmental working conditions are unpredictable.
               </p>
               <p className="text-2xl text-neutral-800 font-medium mb-6 max-w-2xl">
                 Until Oasis.
