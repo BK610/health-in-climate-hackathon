@@ -5,7 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function LoginPage() {
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gray-50">
+    <main
+      className="flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/TestImage.png')"
+      }}
+    >
       <div className="w-full max-w-md">
         <Card>
           <CardHeader className="space-y-1">
