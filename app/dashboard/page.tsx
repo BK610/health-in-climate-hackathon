@@ -21,7 +21,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle } from "lucide-react";
+import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle, Wind, Thermometer, Droplets, Eye } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -126,6 +126,67 @@ export default function Page() {
                     <Button size="sm">
                       Save Log
                     </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="flex flex-col gap-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Eye className="h-5 w-5" />
+                    Air Quality Monitor
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-col gap-6">
+                    <div className="text-center p-6 rounded-lg bg-orange-50 border-2 border-orange-300">
+                      <div className="text-5xl font-bold text-orange-800 mb-2">156</div>
+                      <div className="text-lg font-medium text-orange-700">Air Quality Index</div>
+                      <div className="text-sm text-orange-600 mt-1">Unhealthy for Sensitive Groups</div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="p-4 rounded-lg bg-red-50 border-2 border-red-300">
+                        <div className="text-xs font-medium text-red-600 mb-1">PM2.5</div>
+                        <div className="flex items-baseline gap-1">
+                          <div className="text-3xl font-bold text-red-800">65.2</div>
+                          <div className="text-xs text-red-600">μg/m³</div>
+                        </div>
+                      </div>
+
+                      <div className="p-4 rounded-lg bg-yellow-50 border-2 border-yellow-300">
+                        <div className="text-xs font-medium text-yellow-600 mb-1">PM10</div>
+                        <div className="flex items-baseline gap-1">
+                          <div className="text-3xl font-bold text-yellow-800">89.4</div>
+                          <div className="text-xs text-yellow-600">μg/m³</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="text-center p-2 rounded bg-gray-50">
+                        <Thermometer className="w-4 h-4 text-gray-600 mx-auto mb-1" />
+                        <div className="text-sm font-medium text-gray-800">72°F</div>
+                        <div className="text-xs text-gray-600">Temp</div>
+                      </div>
+
+                      <div className="text-center p-2 rounded bg-gray-50">
+                        <Droplets className="w-4 h-4 text-gray-600 mx-auto mb-1" />
+                        <div className="text-sm font-medium text-gray-800">68%</div>
+                        <div className="text-xs text-gray-600">Humidity</div>
+                      </div>
+
+                      <div className="text-center p-2 rounded bg-gray-50">
+                        <Wind className="w-4 h-4 text-gray-600 mx-auto mb-1" />
+                        <div className="text-sm font-medium text-gray-800">8.2 mph</div>
+                        <div className="text-xs text-gray-600">Wind</div>
+                      </div>
+                    </div>
+
+                    <div className="text-xs text-muted-foreground text-center border-t pt-3">
+                      Last updated: 30 seconds ago
+                    </div>
                   </div>
                 </CardContent>
               </Card>
