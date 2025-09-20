@@ -19,7 +19,7 @@ const data = {
   versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
   navMain: [
     {
-      title: "Construction Sites",
+      title: "New York",
       url: "#",
       items: [
         {
@@ -28,7 +28,25 @@ const data = {
           isActive: true,
         },
         {
-          title: "90 Downing Street",
+          title: "1239 Downing Street, Brooklyn",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "California",
+      url: "#",
+      items: [
+        {
+          title: "Museum of Modern Art",
+          url: "#",
+        },
+        {
+          title: "Joe's Crab Shack",
+          url: "#",
+        },
+        {
+          title: "Yosemite National Park Cabin",
           url: "#",
         },
       ],
