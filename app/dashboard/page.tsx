@@ -24,6 +24,7 @@ import {
   Thermometer,
   Droplets,
   Eye,
+  Inbox,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -52,6 +53,12 @@ export default function Page() {
           <span className="text-sm">
             <Link href="#">Reports</Link>
           </span>
+          <span className="text-sm fixed right-10 rounded-md bg-neutral-50 p-2 border border-neutral-200 hover:cursor-pointer">
+            <Inbox className="h-4 w-4" />
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium shadow-sm">
+              2
+            </span>
+          </span>{" "}
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <Card>
