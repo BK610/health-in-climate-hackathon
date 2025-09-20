@@ -12,22 +12,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="text-center sm:text-left mb-8 md:mb-0">
               <h1 className="text-5xl font-bold mb-6">Oasis</h1>
-              <p className="text-2xl text-neutral-600 mb-2 max-w-2xl">
-                Compliance failure is expensive. Weather is unpredictable.
+              <p className="text-2xl text-neutral-600 mb-4 max-w-2xl">
+                Compliance failure is expensive.
+                <br />
+                Environmental quality is unpredictable.
               </p>
-              <p className="text-2xl text-neutral-800 font-medium mb-8 max-w-2xl">
+              <p className="text-2xl text-neutral-800 font-medium mb-6 max-w-2xl">
                 Until Oasis.
               </p>
-              <div className="flex gap-4 items-center justify-center sm:justify-start">
-                <Link href="/login">
-                  <Button
-                    size="lg"
-                    className="bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg shadow-blue-600/50"
-                  >
-                    Get started
-                  </Button>
-                </Link>
-              </div>
+              <Link href="/login">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg shadow-blue-600/50 hover:cursor-pointer"
+                >
+                  Get started
+                </Button>
+              </Link>
             </div>
             <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-md border border-blue-400">
               <Image
@@ -48,26 +48,21 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">Key Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-6 border-blue-400">
-              <h3 className="text-xl font-semibold mb-4">
-                Real-time Monitoring
-              </h3>
+              <h3 className="text-xl font-semibold">Real-time Monitoring</h3>
               <p className="text-neutral-600">
-                Receive real-time alerts for air quality risks with our advanced
-                monitoring system and receive instant alerts for your
-                construction sites.
+                Receive real-time alerts for air quality and extreme heat risks
+                at your construction sites, with on-site measurement devices.
               </p>
             </Card>
             <Card className="p-6 border-blue-400">
-              <h3 className="text-xl font-semibold mb-4">
-                Compliance Automation
-              </h3>
+              <h3 className="text-xl font-semibold">Compliance Automation</h3>
               <p className="text-neutral-600">
                 Automate compliance checks and documentation, reducing manual
                 work and ensuring nothing falls through the cracks.
               </p>
             </Card>
             <Card className="p-6 border-blue-400">
-              <h3 className="text-xl font-semibold mb-4">Worker Safety</h3>
+              <h3 className="text-xl font-semibold">Worker Safety</h3>
               <p className="text-neutral-600">
                 Protect your workforce with proactive safety measures and clear
                 protocols for extreme weather conditions.
@@ -121,8 +116,8 @@ export default function Home() {
                 Adapting to Climate Change
               </h2>
               <p className="text-neutral-600 mb-6">
-                As extreme weather events become more frequent and intense,
-                construction sites face unprecedented challenges:
+                As the environment changes, staying safe on the job becomes more
+                difficult:
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
