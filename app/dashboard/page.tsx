@@ -21,7 +21,18 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle, Wind, Thermometer, Droplets, Eye } from "lucide-react";
+import {
+  MapPin,
+  Users,
+  Clock,
+  AlertTriangle,
+  CheckCircle,
+  Circle,
+  Wind,
+  Thermometer,
+  Droplets,
+  Eye,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -39,13 +50,15 @@ export default function Page() {
             <Link href="/dashboard">Overview</Link>
           </span>
           <span className="text-sm">
-            <Link href="/dashboard/compliance">Compliance</Link>
+            <Link href="/nycompliance.pdf" target="_blank">
+              Compliance
+            </Link>
           </span>
           <span className="text-sm">
-            <Link href="/dashboard/analytics">Analytics</Link>
+            <Link href="#">Analytics</Link>
           </span>
           <span className="text-sm">
-            <Link href="/dashboard/reports">Reports</Link>
+            <Link href="#">Reports</Link>
           </span>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
@@ -54,7 +67,9 @@ export default function Page() {
               <div className="flex justify-between items-start">
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3">
-                    <CardTitle className="text-2xl font-bold">Empire State Building Demolition</CardTitle>
+                    <CardTitle className="text-2xl font-bold">
+                      Empire State Building Demolition
+                    </CardTitle>
                     <span className="inline-flex items-center gap-1.5 rounded-md bg-red-50 px-3 py-1.5 text-sm font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
                       <AlertTriangle className="h-4 w-4" />
                       CRITICAL
@@ -95,7 +110,9 @@ export default function Page() {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
                       <CheckCircle className="h-5 w-5 text-green-600 cursor-pointer" />
-                      <span className="text-green-800">Distribute masks to workers</span>
+                      <span className="text-green-800">
+                        Distribute masks to workers
+                      </span>
                     </div>
                     <div className="flex items-center gap-3 p-3 rounded-lg bg-red-50 border border-red-200">
                       <Circle className="h-5 w-5 text-red-600 cursor-pointer hover:text-red-700" />
@@ -103,7 +120,9 @@ export default function Page() {
                     </div>
                     <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
                       <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
-                      <span className="text-yellow-800">Notify onsite manager</span>
+                      <span className="text-yellow-800">
+                        Notify onsite manager
+                      </span>
                     </div>
                     <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
                       <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
@@ -123,9 +142,7 @@ export default function Page() {
                     rows={5}
                   />
                   <div className="flex justify-end mt-3">
-                    <Button size="sm">
-                      Save Log
-                    </Button>
+                    <Button size="sm">Save Log</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -141,24 +158,38 @@ export default function Page() {
                 <CardContent>
                   <div className="flex flex-col gap-6">
                     <div className="text-center p-6 rounded-lg bg-orange-50 border-2 border-orange-300">
-                      <div className="text-5xl font-bold text-orange-800 mb-2">156</div>
-                      <div className="text-lg font-medium text-orange-700">Air Quality Index</div>
-                      <div className="text-sm text-orange-600 mt-1">Unhealthy for Sensitive Groups</div>
+                      <div className="text-5xl font-bold text-orange-800 mb-2">
+                        156
+                      </div>
+                      <div className="text-lg font-medium text-orange-700">
+                        Air Quality Index
+                      </div>
+                      <div className="text-sm text-orange-600 mt-1">
+                        Unhealthy for Sensitive Groups
+                      </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                       <div className="p-4 rounded-lg bg-red-50 border-2 border-red-300">
-                        <div className="text-xs font-medium text-red-600 mb-1">PM2.5</div>
+                        <div className="text-xs font-medium text-red-600 mb-1">
+                          PM2.5
+                        </div>
                         <div className="flex items-baseline gap-1">
-                          <div className="text-3xl font-bold text-red-800">65.2</div>
+                          <div className="text-3xl font-bold text-red-800">
+                            65.2
+                          </div>
                           <div className="text-xs text-red-600">μg/m³</div>
                         </div>
                       </div>
 
                       <div className="p-4 rounded-lg bg-yellow-50 border-2 border-yellow-300">
-                        <div className="text-xs font-medium text-yellow-600 mb-1">PM10</div>
+                        <div className="text-xs font-medium text-yellow-600 mb-1">
+                          PM10
+                        </div>
                         <div className="flex items-baseline gap-1">
-                          <div className="text-3xl font-bold text-yellow-800">89.4</div>
+                          <div className="text-3xl font-bold text-yellow-800">
+                            89.4
+                          </div>
                           <div className="text-xs text-yellow-600">μg/m³</div>
                         </div>
                       </div>
@@ -167,19 +198,25 @@ export default function Page() {
                     <div className="grid grid-cols-3 gap-2">
                       <div className="text-center p-2 rounded bg-gray-50">
                         <Thermometer className="w-4 h-4 text-gray-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-800">72°F</div>
+                        <div className="text-sm font-medium text-gray-800">
+                          72°F
+                        </div>
                         <div className="text-xs text-gray-600">Temp</div>
                       </div>
 
                       <div className="text-center p-2 rounded bg-gray-50">
                         <Droplets className="w-4 h-4 text-gray-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-800">68%</div>
+                        <div className="text-sm font-medium text-gray-800">
+                          68%
+                        </div>
                         <div className="text-xs text-gray-600">Humidity</div>
                       </div>
 
                       <div className="text-center p-2 rounded bg-gray-50">
                         <Wind className="w-4 h-4 text-gray-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-800">8.2 mph</div>
+                        <div className="text-sm font-medium text-gray-800">
+                          8.2 mph
+                        </div>
                         <div className="text-xs text-gray-600">Wind</div>
                       </div>
                     </div>
