@@ -21,7 +21,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Wind, Thermometer, Droplets, Eye, Bell, User, FileText, ListTodo, PenTool, Building } from "lucide-react";
+import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Wind, Thermometer, Droplets, Eye, Bell, User, FileText, ListTodo, PenTool, Building, Calendar } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -293,6 +293,157 @@ export default function Page() {
               </Card>
             </div>
           </div>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Calendar className="h-5 w-5" />
+                Worker Schedules
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="p-4 rounded-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-blue-700">MW</span>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Mike Wilson</div>
+                      <div className="text-xs text-gray-500">Site Supervisor</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Today</span>
+                      <span className="font-medium">6:00 AM - 2:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Tomorrow</span>
+                      <span className="font-medium">6:00 AM - 2:00 PM</span>
+                    </div>
+                    <div className="text-xs text-green-600 mt-2">✓ On Site</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 bg-green-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-green-700">SJ</span>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Sarah Johnson</div>
+                      <div className="text-xs text-gray-500">Safety Inspector</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Today</span>
+                      <span className="font-medium">7:00 AM - 3:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Tomorrow</span>
+                      <span className="font-medium">7:00 AM - 3:00 PM</span>
+                    </div>
+                    <div className="text-xs text-green-600 mt-2">✓ On Site</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 bg-orange-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-orange-700">DR</span>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">David Rodriguez</div>
+                      <div className="text-xs text-gray-500">Equipment Operator</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Today</span>
+                      <span className="font-medium">8:00 AM - 4:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Tomorrow</span>
+                      <span className="font-medium">Off</span>
+                    </div>
+                    <div className="text-xs text-yellow-600 mt-2">⚠ Break - 30 min</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 bg-purple-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-purple-700">AL</span>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Amy Lee</div>
+                      <div className="text-xs text-gray-500">Environmental Monitor</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Today</span>
+                      <span className="font-medium">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Tomorrow</span>
+                      <span className="font-medium">9:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="text-xs text-green-600 mt-2">✓ On Site</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-red-700">TB</span>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Tom Brown</div>
+                      <div className="text-xs text-gray-500">Demolition Specialist</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Today</span>
+                      <span className="font-medium">6:30 AM - 2:30 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Tomorrow</span>
+                      <span className="font-medium">6:30 AM - 2:30 PM</span>
+                    </div>
+                    <div className="text-xs text-red-600 mt-2">⚠ Sick Leave</div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-lg border border-gray-200">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-8 w-8 bg-cyan-100 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-medium text-cyan-700">JM</span>
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Jessica Martinez</div>
+                      <div className="text-xs text-gray-500">Site Medic</div>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Today</span>
+                      <span className="font-medium">7:00 AM - 3:00 PM</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Tomorrow</span>
+                      <span className="font-medium">7:00 AM - 3:00 PM</span>
+                    </div>
+                    <div className="text-xs text-green-600 mt-2">✓ On Site</div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="bg-muted/50 aspect-video rounded-xl" />
             <div className="bg-muted/50 aspect-video rounded-xl" />
