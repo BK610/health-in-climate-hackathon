@@ -1,12 +1,4 @@
 import { AppSidebar } from "@/components/app-sidebar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import {
   SidebarInset,
@@ -104,7 +96,7 @@ export default function Page() {
             <div className="flex flex-col gap-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>Tasks List</CardTitle>
+                  <CardTitle>Compliance, Health, and Safety Tasks</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-col gap-3">
@@ -152,7 +144,7 @@ export default function Page() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Eye className="h-5 w-5" />
-                    Air Quality Monitor
+                    Air Quality
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
