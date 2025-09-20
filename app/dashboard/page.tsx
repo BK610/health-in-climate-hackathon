@@ -21,7 +21,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle, Wind, Thermometer, Droplets, Eye } from "lucide-react";
+import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle, Wind, Thermometer, Droplets, Eye, Bell, User } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -47,6 +47,17 @@ export default function Page() {
           <span className="text-sm">
             <Link href="/dashboard/reports">Reports</Link>
           </span>
+          <div className="flex items-center gap-3 ml-auto">
+            <div className="relative">
+              <Bell className="h-5 w-5 text-gray-600 cursor-pointer hover:text-gray-800" />
+              <div className="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full flex items-center justify-center">
+                <span className="text-xs text-white font-bold">3</span>
+              </div>
+            </div>
+            <div className="h-8 w-8 bg-gray-200 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-300">
+              <User className="h-4 w-4 text-gray-600" />
+            </div>
+          </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <Card>
@@ -140,27 +151,20 @@ export default function Page() {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-col gap-6">
-                    <div className="text-center p-6 rounded-lg bg-orange-50 border-2 border-orange-300">
-                      <div className="text-5xl font-bold text-orange-800 mb-2">156</div>
-                      <div className="text-lg font-medium text-orange-700">Air Quality Index</div>
-                      <div className="text-sm text-orange-600 mt-1">Unhealthy for Sensitive Groups</div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="p-4 rounded-lg bg-red-50 border-2 border-red-300">
-                        <div className="text-xs font-medium text-red-600 mb-1">PM2.5</div>
-                        <div className="flex items-baseline gap-1">
-                          <div className="text-3xl font-bold text-red-800">65.2</div>
-                          <div className="text-xs text-red-600">μg/m³</div>
-                        </div>
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="text-center p-4 rounded-lg">
+                        <div className="text-3xl font-bold text-orange-600">156</div>
+                        <div className="text-xs font-medium text-gray-600 mb-1">AQI</div>
                       </div>
 
-                      <div className="p-4 rounded-lg bg-yellow-50 border-2 border-yellow-300">
-                        <div className="text-xs font-medium text-yellow-600 mb-1">PM10</div>
-                        <div className="flex items-baseline gap-1">
-                          <div className="text-3xl font-bold text-yellow-800">89.4</div>
-                          <div className="text-xs text-yellow-600">μg/m³</div>
-                        </div>
+                      <div className="text-center p-4 rounded-lg bg-white">
+                        <div className="text-3xl font-bold text-red-600">65.2</div>
+                        <div className="text-xs font-medium text-gray-600 mb-1">PM2.5 μg/m³</div>
+                      </div>
+
+                      <div className="text-center p-4 rounded-lg bg-white">
+                        <div className="text-3xl font-bold text-red-600">89.4</div>
+                        <div className="text-xs font-medium text-gray-600 mb-1">PM10 μg/m³</div>
                       </div>
                     </div>
 
