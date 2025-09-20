@@ -21,7 +21,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Circle, Wind, Thermometer, Droplets, Eye, Bell, User, FileText } from "lucide-react";
+import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Wind, Thermometer, Droplets, Eye, Bell, User, FileText, ListTodo, PenTool, Building } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
@@ -65,6 +65,7 @@ export default function Page() {
               <div className="flex justify-between items-start">
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3">
+                    <Building className="h-6 w-6 text-gray-600" />
                     <CardTitle className="text-2xl font-bold">Empire State Building Demolition</CardTitle>
                     <span className="inline-flex items-center gap-1.5 rounded-md bg-red-50 px-3 py-1.5 text-sm font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
                       <AlertTriangle className="h-4 w-4" />
@@ -100,32 +101,77 @@ export default function Page() {
             <div className="flex flex-col gap-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>Tasks List</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <ListTodo className="h-5 w-5" />
+                    Tasks List
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
-                      <CheckCircle className="h-5 w-5 text-green-600 cursor-pointer" />
-                      <span className="text-green-800">Distribute masks to workers</span>
+                    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200">
+                      <div className="flex-1">
+                        <div className="font-medium text-gray-900">Distribute N95 masks to all workers</div>
+                        <div className="flex items-center gap-4 mt-1">
+                          <span className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">Complete</span>
+                          <div className="flex items-center gap-1 text-xs text-gray-500">
+                            <Clock className="h-3 w-3" />
+                            30 min
+                          </div>
+                        </div>
+                      </div>
+                      <Button size="sm" disabled className="bg-gray-100 text-gray-400">Complete</Button>
                     </div>
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-red-50 border border-red-200">
-                      <Circle className="h-5 w-5 text-red-600 cursor-pointer hover:text-red-700" />
-                      <span className="text-red-800">Upgrade equipment</span>
+
+                    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200">
+                      <div className="flex-1">
+                        <div className="font-medium text-gray-900">Install new air filtration equipment</div>
+                        <div className="flex items-center gap-4 mt-1">
+                          <span className="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">In Progress</span>
+                          <div className="flex items-center gap-1 text-xs text-gray-500">
+                            <Clock className="h-3 w-3" />
+                            2 hours
+                          </div>
+                        </div>
+                      </div>
+                      <Button size="sm">Finish</Button>
                     </div>
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
-                      <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
-                      <span className="text-yellow-800">Notify onsite manager</span>
+
+                    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200">
+                      <div className="flex-1">
+                        <div className="font-medium text-gray-900">Notify onsite manager of air quality alert</div>
+                        <div className="flex items-center gap-4 mt-1">
+                          <span className="text-xs px-2 py-1 bg-orange-100 text-orange-700 rounded-full">Pending</span>
+                          <div className="flex items-center gap-1 text-xs text-gray-500">
+                            <Clock className="h-3 w-3" />
+                            10 min
+                          </div>
+                        </div>
+                      </div>
+                      <Button size="sm" variant="outline">Start</Button>
                     </div>
-                    <div className="flex items-center gap-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
-                      <Circle className="h-5 w-5 text-yellow-600 cursor-pointer hover:text-yellow-700" />
-                      <span className="text-yellow-800">Review report</span>
+
+                    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200">
+                      <div className="flex-1">
+                        <div className="font-medium text-gray-900">Review daily safety inspection report</div>
+                        <div className="flex items-center gap-4 mt-1">
+                          <span className="text-xs px-2 py-1 bg-orange-100 text-orange-700 rounded-full">Pending</span>
+                          <div className="flex items-center gap-1 text-xs text-gray-500">
+                            <Clock className="h-3 w-3" />
+                            45 min
+                          </div>
+                        </div>
+                      </div>
+                      <Button size="sm" variant="outline">Start</Button>
                     </div>
                   </div>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Create New Log</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <PenTool className="h-5 w-5" />
+                    Create New Log
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <textarea
