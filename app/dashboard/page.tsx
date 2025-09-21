@@ -1,3 +1,5 @@
+"use client";
+
 import { AppSidebar } from "@/components/app-sidebar";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -13,14 +15,33 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Wind, Thermometer, Droplets, Eye, Bell, User, FileText, ListTodo, PenTool, Building, Calendar } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { MapPin, Users, Clock, AlertTriangle, CheckCircle, Wind, Thermometer, Droplets, Eye, Bell, User, FileText, ListTodo, PenTool, Building, Calendar, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Page() {
+  const [logType, setLogType] = useState("Safety");
+  const [logEntry, setLogEntry] = useState("");
+
+  const logTypes = [
+    "Safety",
+    "Equipment",
+    "Environmental",
+    "Maintenance",
+    "Incident",
+    "General"
+  ];
+
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset>
+      <SidebarInset className="h-screen overflow-y-auto">
         <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
           <SidebarTrigger className="-ml-1" />
           <Separator
@@ -53,7 +74,7 @@ export default function Page() {
             </div>
           </div>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4">
+        <div className="flex flex-1 flex-col gap-4 p-4 overflow-y-auto">
           <Card>
             <CardHeader>
               <div className="flex justify-between items-start">
@@ -160,7 +181,7 @@ export default function Page() {
                   </div>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <PenTool className="h-5 w-5" />
@@ -168,19 +189,49 @@ export default function Page() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <textarea
-                    placeholder="Enter your log entry here..."
-                    className="w-full min-h-[120px] p-3 border border-input rounded-md bg-transparent text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-vertical"
-                    rows={5}
-                  />
-                  <div className="flex justify-end mt-3">
-                    <Button size="sm">Save Log</Button>
+                  <div className="flex flex-col gap-6 h-full">
+                    <div className="flex flex-col gap-2">
+                      <label className="text-sm font-medium text-gray-700">Log Type</label>
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="outline" className="w-full justify-between">
+                            {logType}
+                            <ChevronDown className="h-4 w-4" />
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="w-full">
+                          {logTypes.map((type) => (
+                            <DropdownMenuItem
+                              key={type}
+                              onClick={() => setLogType(type)}
+                              className="cursor-pointer"
+                            >
+                              {type}
+                            </DropdownMenuItem>
+                          ))}
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </div>
+                    
+                    <div className="flex flex-col gap-2 flex-1">
+                      <label className="text-sm font-medium text-gray-700">Log Entry</label>
+                      <textarea
+                        placeholder="Enter your log entry here..."
+                        value={logEntry}
+                        onChange={(e) => setLogEntry(e.target.value)}
+                        className="w-full flex-1 p-3 border border-input rounded-md bg-transparent text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
+                      />
+                    </div>
+                    
+                    <div className="flex justify-end">
+                      <Button size="sm">Save Log</Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
             <div className="flex flex-col gap-4">
-              <Card>
+              <Card className="h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Eye className="h-5 w-5" />
@@ -292,10 +343,10 @@ export default function Page() {
             </div>
           </div>
 
-          <Card>
+          <Card className="mt-6 border-2 border-blue-200">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Calendar className="h-6 w-6 text-blue-600" />
                 Worker Schedules
               </CardTitle>
             </CardHeader>
@@ -442,12 +493,6 @@ export default function Page() {
             </CardContent>
           </Card>
 
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-          </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
         </div>
       </SidebarInset>
     </SidebarProvider>
